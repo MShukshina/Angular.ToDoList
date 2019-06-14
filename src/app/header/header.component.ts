@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Input, Output} from '@angular/core';
+import {TasksService} from '../tasks.service';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,6 @@ import {Component, EventEmitter, OnInit, Input, Output} from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-
-  @Input() tasks;
   @Output() taskAdd = new EventEmitter<string>();
 
   constructor() {}

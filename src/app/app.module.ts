@@ -17,7 +17,7 @@ import {TasksService} from './tasks.service';
     AddItemComponent,
     ListItemComponent
   ],
-  entryComponents: [ListItemComponent],
+  entryComponents: [],
 
   imports: [
     BrowserModule,

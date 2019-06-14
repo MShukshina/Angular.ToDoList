@@ -12,11 +12,8 @@ export class AppComponent implements OnInit {
   title = 'my-todo-list';
 
   public tasks;
-  private serviceTasks;
 
-  constructor(tasksService: TasksService) {
-    this.serviceTasks = tasksService;
-  }
+  constructor(private serviceTasks: TasksService) { }
 
   ngOnInit() {
     this.tasks = this.serviceTasks.getTasks();
@@ -28,6 +25,6 @@ export class AppComponent implements OnInit {
   }
   addTask(name: string) {
      this.serviceTasks.add(name);
-     this.tasks = this.serviceTasks.getTags();
+     this.tasks = this.serviceTasks.getTasks();
   }
 }

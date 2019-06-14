@@ -10,16 +10,9 @@ export class ListItemComponent implements OnInit {
   @Input() task;
   @Output() taskDelete = new EventEmitter();
 
-
-  constructor(private viewConteinerref: ViewContainerRef,
-              private componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor() {}
 
   ngOnInit() {}
-
-  addComponentListItem() {
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ListItemComponent);
-    const componentRef = this.viewConteinerref.createComponent(componentFactory);
-  }
 
   onTaskBtDelete() {
     this.taskDelete.emit();

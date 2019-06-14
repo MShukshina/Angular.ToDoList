@@ -1,3 +1,6 @@
+import {Injectable} from '@angular/core';
+
+@Injectable()
 export class TasksService {
 
   private tasks = [];
@@ -8,15 +11,11 @@ export class TasksService {
     return this.tasks;
   }
 
-  taskDelete(i) {
-    this.tasks.splice(i, 1);
-  }
-
   public remove(index: number) {
     return this.tasks.splice(index, 1);
   }
 
-  public add(name) {
+  public add(name: string) {
     this.tasks.push(name);
   }
 
