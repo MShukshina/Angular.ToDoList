@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {TasksService} from './tasks.service';
-import {Task} from './task';
-
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,20 +9,7 @@ import {Task} from './task';
 export class AppComponent implements OnInit {
   title = 'my-todo-list';
 
-  public tasks: Task[];
+  constructor() { }
 
-  constructor(private serviceTasks: TasksService) { }
-
-  ngOnInit() {
-    this.tasks = this.serviceTasks.getTasks();
-  }
-
-  removeTask(index: number) {
-    this.serviceTasks.remove(index);
-    this.tasks = this.serviceTasks.getTasks();
-  }
-  addTask(name: string) {
-     this.serviceTasks.add(name);
-     this.tasks = this.serviceTasks.getTasks();
-  }
+  ngOnInit() { }
 }

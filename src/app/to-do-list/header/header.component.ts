@@ -1,5 +1,4 @@
-import {Component, EventEmitter, OnInit, Input, Output} from '@angular/core';
-import {TasksService} from '../tasks.service';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -15,6 +14,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {}
 
   public onTaskAdd(name: string) {
-      this.taskAdd.emit(name);
+    this.taskAdd.emit(name);
   }
 }

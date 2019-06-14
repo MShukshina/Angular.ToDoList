@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {TasksService} from '../tasks.service';
 import {Task} from '../task';
 
@@ -9,8 +9,6 @@ import {Task} from '../task';
 })
 export class ToDoListComponent implements OnInit {
 
-  @Output() taskDelete = new EventEmitter<number>();
-
   public tasks: Task[];
   constructor(private serviceTasks: TasksService) {
   }
@@ -19,8 +17,13 @@ export class ToDoListComponent implements OnInit {
     this.tasks = this.serviceTasks.getTasks();
   }
 
-  onTaskDelete(i: number) {
-    this.taskDelete.emit(i);
+  removeTask(index: number) {
+    this.serviceTasks.remove(index);
+    this.tasks = this.serviceTasks.getTasks();
+  }
+  addTask(name: string) {
+    this.serviceTasks.add(name);
+    this.tasks = this.serviceTasks.getTasks();
   }
 
 }

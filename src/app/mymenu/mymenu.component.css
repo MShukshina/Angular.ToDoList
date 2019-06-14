@@ -1,0 +1,15 @@
+button{
+  font-size: 18px;
+  color: darkslategrey;
+  font-family: Verdana cursive;
+}
+
+.active{
+  color: ghostwhite;
+}
+
+.menu{
+  background-color: slategrey;
+  display: flex;
+  flex-direction: row;
+}
