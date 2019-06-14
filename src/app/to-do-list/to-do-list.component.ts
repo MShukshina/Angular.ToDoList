@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TasksService} from '../tasks.service';
+import {Task} from '../task';
 
 @Component({
   selector: 'app-to-do-list',
@@ -10,7 +11,7 @@ export class ToDoListComponent implements OnInit {
 
   @Output() taskDelete = new EventEmitter<number>();
 
-  public tasks;
+  public tasks: Task[];
   constructor(private serviceTasks: TasksService) {
   }
 

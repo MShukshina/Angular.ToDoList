@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
+import {Task} from './task';
 
 @Injectable()
 export class TasksService {
 
-  private tasks = [];
+  private tasks: Task[] = [];
 
   constructor() { }
 
@@ -16,7 +17,7 @@ export class TasksService {
   }
 
   public add(name: string) {
-    this.tasks.push(name);
+    this.tasks.push({name, id: this.tasks.length });
   }
 
 }

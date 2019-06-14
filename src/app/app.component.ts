@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TasksService} from './tasks.service';
+import {Task} from './task';
 
 
 @Component({
@@ -11,7 +12,7 @@ import {TasksService} from './tasks.service';
 export class AppComponent implements OnInit {
   title = 'my-todo-list';
 
-  public tasks;
+  public tasks: Task[];
 
   constructor(private serviceTasks: TasksService) { }
 
