@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {ListItemComponent} from './to-do-list/list-item/list-item.component';
+import { Component, OnInit } from '@angular/core';
+import {TasksService} from './tasks.service';
 
 
 @Component({
@@ -8,12 +8,26 @@ import {ListItemComponent} from './to-do-list/list-item/list-item.component';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'my-todo-list';
 
-  tasks = [];
+  public tasks;
+  private serviceTasks;
 
-  taskDelete(i) {
-    this.tasks.splice(i, 1);
+  constructor(tasksService: TasksService) {
+    this.serviceTasks = tasksService;
+  }
+
+  ngOnInit() {
+    this.tasks = this.serviceTasks.getTasks();
+  }
+
+  removeTask(index: number) {
+    this.serviceTasks.remove(index);
+    this.tasks = this.serviceTasks.getTasks();
+  }
+  addTask(name: string) {
+     this.serviceTasks.add(name);
+     this.tasks = this.serviceTasks.getTags();
   }
 }

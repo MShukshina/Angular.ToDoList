@@ -1,2 +1,2 @@
-<app-header [tasks]="tasks"></app-header>
-<app-to-do-list [tasks]="tasks" (taskDelete)="taskDelete($event)" ></app-to-do-list>
+<app-header [tasks]="tasks" (taskAdd)="addTask($event)"></app-header>
+<app-to-do-list [tasks]="tasks" (taskDelete)="removeTask($event)" ></app-to-do-list>

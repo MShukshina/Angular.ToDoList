@@ -9,14 +9,13 @@ import {Component, EventEmitter, OnInit, Input, Output} from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() tasks;
+  @Output() taskAdd = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  public onAddTask(name: string) {
-    if (name) {
-      this.tasks.push(name);
-    }
+  public onTaskAdd(name: string) {
+      this.taskAdd.emit(name);
   }
 }

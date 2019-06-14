@@ -7,6 +7,7 @@ import { HeaderComponent} from './header/header.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { ListItemComponent } from './to-do-list/list-item/list-item.component';
 import { AddItemComponent } from './header/add-item/add-item.component';
+import {TasksService} from './tasks.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { AddItemComponent } from './header/add-item/add-item.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ TasksService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

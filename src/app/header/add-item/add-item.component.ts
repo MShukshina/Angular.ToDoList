@@ -7,19 +7,20 @@ import {Component,  OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class AddItemComponent implements OnInit {
 
-  @Output() tasksChange = new EventEmitter<string>();
+  @Output() taskAdd = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
   }
+
   clear(taskName) {
     taskName.value = '';
   }
 
-  onTaskChange(name: string) {
+  onTaskBtAdd(name: string) {
     if (name) {
-      this.tasksChange.emit(name);
+      this.taskAdd.emit(name);
     }
   }
 
