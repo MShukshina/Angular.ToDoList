@@ -1,11 +1,12 @@
-button{
+a{
   font-size: 18px;
-  color: darkslategrey;
+  color: white;
   font-family: Verdana cursive;
+  margin: 5px;
 }
 
 .active{
-  color: ghostwhite;
+  color: lightgrey;
 }
 
 .menu{
@@ -13,3 +14,4 @@ button{
   display: flex;
   flex-direction: row;
 }
+

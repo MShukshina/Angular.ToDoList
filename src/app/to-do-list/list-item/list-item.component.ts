@@ -1,5 +1,5 @@
-import {Component, ComponentFactoryResolver, EventEmitter, Input, OnInit, Output, ViewContainerRef} from '@angular/core';
-import {Task} from '../../task';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Task} from '../../Task';
 
 @Component({
   selector: 'app-list-item',

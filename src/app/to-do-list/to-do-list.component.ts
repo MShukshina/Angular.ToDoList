@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {TasksService} from '../tasks.service';
-import {Task} from '../task';
+import {Task} from '../Task';
 
 @Component({
   selector: 'app-to-do-list',
