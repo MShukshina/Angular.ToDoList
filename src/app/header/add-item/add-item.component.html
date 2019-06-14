@@ -1,0 +1,2 @@
+<input type="text" #taskElement (keydown.enter)="onTaskChange($event.target.value); clear(taskName)" #taskName>
+<button (click)="onTaskChange(taskElement.value); clear(taskName)"  >add</button>

@@ -1,0 +1,1 @@
+<app-list-item *ngFor = "let task of tasks; index as i" [task]="task" (taskDelete)="onTaskDelete(i)" [task]="task"></app-list-item>

@@ -1,0 +1,10 @@
+app-list-item{
+  margin: 0;
+  border: 2px solid white;
+  padding: 3px;
+  margin-bottom: 5px;
+  width: 270px;
+
+  display: flex;
+  flex-direction: row;
+}

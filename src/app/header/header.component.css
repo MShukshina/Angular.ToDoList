@@ -1,0 +1,11 @@
+.myH1 {
+  color: white;
+  font-size: 48px;
+}
+
+app-add-item{
+  display: flex;
+  flex-direction: row;
+}
+
+

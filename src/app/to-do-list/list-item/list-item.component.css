@@ -1,0 +1,14 @@
+button{
+  border-radius: 2px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+div{
+  color: white;
+  font-size: 18px;
+  width: 250px;
+}
