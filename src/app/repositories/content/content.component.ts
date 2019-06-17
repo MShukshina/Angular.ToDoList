@@ -9,9 +9,11 @@ import {Repositories} from '../../Repositories';
 })
 export class ContentComponent implements OnInit {
 
-  @Input() repository: Repositories;
+  public repositories: Repositories[];
 
-  constructor() { }
+  constructor(private serviceRepositories: RepositoriesService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.repositories = this.serviceRepositories.getRepositories();
+  }
 }
