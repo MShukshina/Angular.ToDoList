@@ -1,0 +1,12 @@
+h1{
+  margin: 0px;
+  font-family: Verdana cursive;
+  color: white;
+  font-size: 48px;
+  text-align: center;
+}
+
+input{
+  font-size: 18px;
+  width: 250px;
+}

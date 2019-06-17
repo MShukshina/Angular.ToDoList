@@ -1,4 +1,5 @@
-import {Component, ComponentFactoryResolver, EventEmitter, Input, OnInit, Output, ViewContainerRef} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Task} from '../../Task';
 
 @Component({
   selector: 'app-list-item',
@@ -7,19 +8,12 @@ import {Component, ComponentFactoryResolver, EventEmitter, Input, OnInit, Output
 })
 export class ListItemComponent implements OnInit {
 
-  @Input() task;
+  @Input() task: Task;
   @Output() taskDelete = new EventEmitter();
 
-
-  constructor(private viewConteinerref: ViewContainerRef,
-              private componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor() {}
 
   ngOnInit() {}
-
-  addComponentListItem() {
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(ListItemComponent);
-    const componentRef = this.viewConteinerref.createComponent(componentFactory);
-  }
 
   onTaskBtDelete() {
     this.taskDelete.emit();

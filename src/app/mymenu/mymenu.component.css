@@ -1,0 +1,17 @@
+a{
+  font-size: 18px;
+  color: white;
+  font-family: Verdana cursive;
+  margin: 5px;
+}
+
+.active{
+  color: lightgrey;
+}
+
+.menu{
+  background-color: slategrey;
+  display: flex;
+  flex-direction: row;
+}
+

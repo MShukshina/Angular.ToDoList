@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import {ListItemComponent} from './to-do-list/list-item/list-item.component';
-
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +6,10 @@ import {ListItemComponent} from './to-do-list/list-item/list-item.component';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'my-todo-list';
 
-  tasks = [];
+  constructor() { }
 
-  taskDelete(i) {
-    this.tasks.splice(i, 1);
-  }
+  ngOnInit() { }
 }

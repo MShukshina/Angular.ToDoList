@@ -1,0 +1,32 @@
+app-topbox{
+  height: 100px;
+  background-color: slategrey;
+  padding: 16px;
+  border-color: white;
+  border-style: solid;
+  border-width: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+app-footer{
+  height: 100px;
+  background-color: lightslategray;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+app-content{
+  height: 100%;
+  background-color: lightgrey;
+
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: center;
+}
