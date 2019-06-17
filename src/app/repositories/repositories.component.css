@@ -1,10 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0px;
+  height: 100%;
+}
+
 app-topbox{
   height: 100px;
   background-color: slategrey;
-  padding: 16px;
-  border-color: white;
-  border-style: solid;
-  border-width: 10px;
 
   display: flex;
   flex-direction: column;
@@ -22,11 +26,13 @@ app-footer{
   align-items: center;
 }
 app-content{
-  height: 100%;
+  padding: 10px;
+  flex: 1 1 auto;
   background-color: lightgrey;
 
   display: flex;
   flex-direction:column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  overflow: auto;
 }

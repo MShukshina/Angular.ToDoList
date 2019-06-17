@@ -1,2 +1,2 @@
-<div>Всего найдено репозиториев: </div>
-<app-toggle></app-toggle>
+<div id="countPage" >Count repositories: {{this.countPage?.count}}</div>
+<app-toggle (pageChange)="onPageChange()"></app-toggle>

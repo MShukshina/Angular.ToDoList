@@ -1,7 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {RepositoriesService} from '../../repositories.service';
-import {Repositories} from '../../Repositories';
-import {HttpClient} from '@angular/common/http';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-topbox',
@@ -10,25 +7,15 @@ import {HttpClient} from '@angular/common/http';
 })
 export class TopboxComponent implements OnInit {
 
-  public repositories: Repositories[];
+  @Output() repositoriesUpdate = new EventEmitter<string>();
 
-  constructor(private http: HttpClient, private serviceRepositories: RepositoriesService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.repositories = this.serviceRepositories.getRepositories();
-  }
+  ngOnInit() { }
 
-  removeRepositories() {
-    this.serviceRepositories.removeRepositories();
-    this.repositories = this.serviceRepositories.getRepositories();
-  }
-
-  onInputChange(input: HTMLInputElement) {
-    const name: string = input.value;
-    if (name) {
-      console.log(1, 'yes');
-      this.http.get('https://api.github.com/search/repositories?q=' + name).subscribe((data: Repositories[]) => this.repositories = data);
-    }
+  public onInputChange(inputName: any) {
+    const name = inputName.value;
+    this.repositoriesUpdate.emit(name);
   }
 
 }

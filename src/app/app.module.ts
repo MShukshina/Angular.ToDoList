@@ -18,6 +18,7 @@ import { TopboxComponent } from './repositories/topbox/topbox.component';
 import { ContentComponent } from './repositories/content/content.component';
 import { FooterComponent } from './repositories/footer/footer.component';
 import { ToggleComponent } from './repositories/footer/toggle/toggle.component';
+import { ItemContentComponent } from './repositories/content/item-content/item-content.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'todo-list', pathMatch: 'full'},
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     TopboxComponent,
     ContentComponent,
     FooterComponent,
-    ToggleComponent
+    ToggleComponent,
+    ItemContentComponent
   ],
   entryComponents: [],
 
